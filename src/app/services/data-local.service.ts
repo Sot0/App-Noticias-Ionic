@@ -21,7 +21,8 @@ export class DataLocalService {
   async presentToast( message: string) {
     const toast = await this.toastController.create({
       message,
-      duration: 1500
+      duration: 1500,
+      mode: "ios"
     });
     toast.present();
   }

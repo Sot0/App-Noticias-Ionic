@@ -5,10 +5,13 @@ import { environment } from 'src/environments/environment';
 
 const apiKey = environment.apiKeyNews;
 const apiUrl = environment.apiUrl;
-const country = 'us';
+const country = 'mx';
 
 const headers = new HttpHeaders({
-  'X-Api-key': apiKey
+  'X-Api-key': apiKey,
+  // 'Access-Control-Allow-Origin': '*',
+  // 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+  // 'Access-Control-Allow-Headers': 'Content-Type'
 });
 
 @Injectable({
