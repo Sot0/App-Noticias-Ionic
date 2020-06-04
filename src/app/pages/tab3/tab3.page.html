@@ -1,0 +1,22 @@
+<ion-header class="ion-no-border" mode="ios">
+  <ion-toolbar color="dark">
+    <ion-title>
+      News API
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" color="dark">
+
+<ion-slides [options]="sliderOptions"
+            *ngIf="dataLocalService.noticias.length === 0">
+  <ion-slide>
+    <ion-label>No hay favoritos</ion-label>
+  </ion-slide>
+</ion-slides>
+  
+  <app-noticias *ngIf="dataLocalService.noticias.length > 0"
+                [noticias]="dataLocalService.noticias"
+                [enFavoritos]="true"></app-noticias>
+
+</ion-content>
